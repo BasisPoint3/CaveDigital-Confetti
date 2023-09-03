@@ -6,6 +6,25 @@ var toggleConfetti; //call to start or stop the confetti animation depending on 
 var removeConfetti; //call to stop the confetti animation and remove all confetti immediately
 
 (function() {
+var canvas = document.getElementById('confettiCanvas');
+if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'confettiCanvas';
+    document.body.insertBefore(canvas, document.body.firstChild);
+}
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var canvasStyle = canvas.style;
+canvasStyle.position = 'fixed';
+canvasStyle.top = '0';
+canvasStyle.left = '0';
+canvasStyle.zIndex = '99999';
+canvasStyle.pointerEvents = 'none';
+
+canvasStyle.margin = '0';
+canvasStyle.padding = '0';
+
 	startConfetti = startConfettiInner;
 	stopConfetti = stopConfettiInner;
 	toggleConfetti = toggleConfettiInner;
@@ -31,6 +50,25 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 		var width = window.innerWidth;
 		var height = window.innerHeight;
 		window.requestAnimFrame = (function() {
+var canvas = document.getElementById('confettiCanvas');
+if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'confettiCanvas';
+    document.body.insertBefore(canvas, document.body.firstChild);
+}
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var canvasStyle = canvas.style;
+canvasStyle.position = 'fixed';
+canvasStyle.top = '0';
+canvasStyle.left = '0';
+canvasStyle.zIndex = '99999';
+canvasStyle.pointerEvents = 'none';
+
+canvasStyle.margin = '0';
+canvasStyle.padding = '0';
+
 			return window.requestAnimationFrame ||
 				window.webkitRequestAnimationFrame ||
 				window.mozRequestAnimationFrame ||
