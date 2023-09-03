@@ -169,3 +169,6 @@ canvasStyle.padding = '0';
 startConfetti();
 
 setTimeout(stopConfetti, 2000);
+startConfetti();
+
+setTimeout(stopConfetti, 2000);
